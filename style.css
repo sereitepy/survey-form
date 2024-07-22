@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #1a3636, #677d6a);
+  overflow: hidden; /* Prevent body from scrolling */
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  overflow-y: auto; /* Make container scrollable */
+  max-height: 90vh; /* Ensure the container fits within the viewport */
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1a3636;
+}
+
+.user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(50% - 10px); /* Two inputs per row with some gap */
+}
+
+.user-details .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #1a3636;
+}
+
+.user-details .input-box input {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus {
+  border-color: #677d6a;
+}
+
+.gender-details {
+  margin: 20px 0;
+}
+
+.gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a3636;
+}
+
+.gender-details .category {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.gender-details label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #1a3636;
+}
+
+.gender-details .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.gender-details input[type='radio'] {
+  display: none;
+}
+
+.gender-details input[type='radio']:checked ~ .dot {
+  background: #1a3636;
+  border-color: #d9d9d9;
+}
+
+.gender-details .gender {
+  font-size: 16px;
+  color: #666;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #1a3636;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background: #677d6a;
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .gender-details .category {
+    width: 100%;
+  }
+}
+
+/* Additional CSS for User Cards */
+.users {
+  margin-top: 20px;
+  max-height: 40vh; /* Limit the height of the users section */
+  overflow-y: auto; /* Make users section scrollable */
+  padding-right: 10px; /* Avoid content hiding behind the scrollbar */
+}
+
+.user-card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.user-card h3 {
+  font-size: 20px;
+  color: #1a3636;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
